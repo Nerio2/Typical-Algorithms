@@ -1,9 +1,12 @@
-#Typical-Algorithms
+# Typical-Algorithms
 
-###created by: Patryk Kozarski
+### created by: Patryk Kozarski
 
-##Sorting algorithms:
+## Sorting algorithms:
 > sorting.py
 
 \-Bubble sort,  
-\-
+
+## Exam Algorithms:
+specification inside .py files
+> ExamAlgorithms/digitalAlignment.py
