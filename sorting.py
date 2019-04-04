@@ -5,6 +5,7 @@ def swap(a, b):
     temp = b
     b = a
     a = temp
+    return a, b
 
 
 plik = open('results.txt', 'w')
@@ -32,6 +33,20 @@ for i in tab:
     plik.write(str(i) + ", ")
 random.shuffle(tab)
 print ""
-print "Shuffle:"
+
+"""Insertion Sort"""
+plik.write("\nInsertion Sort\n")
+print "\nInsertion Sort\n"
+for i in range(99):
+    if tab[i + 1] < tab[i]:
+        for j in range(i + 1):
+            k = i - j
+            if tab[k + 1] < tab[k]:
+                tab[k + 1], tab[k] = swap(tab[k + 1], tab[k])
+                # temp = tab[k]
+                # tab[k] = tab[k + 1]
+                # tab[k + 1] = temp
+
 for i in tab:
+    plik.write(str(i) + ", ")
     print i,
