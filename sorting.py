@@ -22,9 +22,7 @@ plik.write("\nBubble sort:\n")
 for i in range(99):
     for j in range(length):
         if tab[j] > tab[j + 1]:
-            temp = tab[j]
-            tab[j] = tab[j + 1]
-            tab[j + 1] = temp
+            tab[j], tab[j + 1] = swap(tab[j], tab[j + 1])
     length -= 1
 print ""
 print "Bubble sort:"
