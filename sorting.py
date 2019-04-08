@@ -41,10 +41,23 @@ for i in range(99):
             k = i - j
             if tab[k + 1] < tab[k]:
                 tab[k + 1], tab[k] = swap(tab[k + 1], tab[k])
-                # temp = tab[k]
-                # tab[k] = tab[k + 1]
-                # tab[k + 1] = temp
-
 for i in tab:
     plik.write(str(i) + ", ")
+    print i,
+random.shuffle(tab)
+
+print "\nSelection sort"
+for i in range(50):
+    max = 99 - i
+    min = i
+    for j in range(100 - 2 * i):
+        k = i + j
+        if tab[k] > tab[max]:
+            max = k
+        if tab[k] < tab[min]:
+            min = k
+    tab[i], tab[min] = swap(tab[i], tab[min])
+    tab[(99 - i)], tab[max] = swap(tab[(99 - i)], tab[max])
+
+for i in tab:
     print i,
